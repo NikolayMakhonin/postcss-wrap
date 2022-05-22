@@ -1,4 +1,11 @@
-import {Plugin, AtRule, Processor, AtRuleProps, RuleProps, Rule} from 'postcss'
+import {
+  Plugin,
+  AtRule,
+  Processor,
+  AtRuleProps,
+  RuleProps,
+  Rule,
+} from 'postcss'
 
 type PostCssWrapOptions = {
   type: 'atrule',
