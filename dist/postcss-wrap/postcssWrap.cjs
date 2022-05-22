@@ -12,14 +12,18 @@ function postcssWrap(options) {
             let wrapNode;
             switch (options.type) {
                 case 'atrule':
-                    wrapNode = new postcss.AtRule(Object.assign(Object.assign({}, options.props), { nodes }));
+                    wrapNode = new postcss.AtRule(Object.assign(Object.assign({}, options.props), { raws: result.root.raws, source: result.root.source, nodes }));
                     break;
                 case 'rule':
-                    wrapNode = new postcss.Rule(Object.assign(Object.assign({}, options.props), { nodes }));
+                    wrapNode = new postcss.Rule(Object.assign(Object.assign({}, options.props), { raws: result.root.raws, source: result.root.source, nodes }));
                     break;
                 default:
                     throw new Error('Unknown options.type: ' + options.type);
             }
+            wrapNode.parent = result.root;
+            result.root.nodes.forEach(node => {
+                node.parent = wrapNode;
+            });
             result.root.nodes = [wrapNode];
         },
     };

@@ -10,7 +10,7 @@ describe('pluginCreator', function () {
         params,
       },
     })).process(input)).css
-    const checkOutput = `@media ${params} {${input}\n}`
+    const checkOutput = `@media ${params}{${input}}`
     assert.strictEqual(output, checkOutput)
   }
 
@@ -31,7 +31,7 @@ describe('pluginCreator', function () {
         selectors: [selector],
       },
     })).process(input)).css
-    const checkOutput = `${selector} {${input}\n}`
+    const checkOutput = `${selector}{${input}}`
     assert.strictEqual(output, checkOutput)
   }
 

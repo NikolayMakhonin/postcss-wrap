@@ -25,12 +25,16 @@ export function postcssWrap(options: PostCssWrapOptions): Plugin | Processor {
         case 'atrule':
           wrapNode = new AtRule({
             ...options.props,
+            raws  : result.root.raws,
+            source: result.root.source,
             nodes,
           })
           break
         case 'rule':
           wrapNode = new Rule({
             ...options.props,
+            raws  : result.root.raws,
+            source: result.root.source,
             nodes,
           })
           break
@@ -38,6 +42,10 @@ export function postcssWrap(options: PostCssWrapOptions): Plugin | Processor {
           throw new Error('Unknown options.type: ' + (options as any).type)
       }
 
+      wrapNode.parent = result.root
+      result.root.nodes.forEach(node => {
+        node.parent = wrapNode
+      })
       result.root.nodes = [wrapNode]
     },
   }
