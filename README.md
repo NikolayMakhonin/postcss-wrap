@@ -5,6 +5,8 @@
 
 # Usage
 ```ts
+import postcssWrap from '@flemist/postcss-wrap'
+
 const input = `.class1{} .class2{}`
 const output = await postcss(postcssWrap({
   type: 'atrule',
@@ -18,6 +20,8 @@ const output = await postcss(postcssWrap({
 ```
 
 ```ts
+import postcssWrap from '@flemist/postcss-wrap'
+
 const input = `.class1{} .class2{}`
 const output = await postcss(postcssWrap({
   type: 'rule',
