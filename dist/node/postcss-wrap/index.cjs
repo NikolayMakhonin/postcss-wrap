@@ -2,7 +2,9 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function test() {
-}
+var postcssWrap_postcssWrap = require('./postcssWrap.cjs');
+require('postcss');
 
-exports.test = test;
+
+
+exports["default"] = postcssWrap_postcssWrap.postcssWrap;

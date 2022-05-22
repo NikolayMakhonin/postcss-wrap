@@ -1,3 +1,3 @@
-export function test() {
+import {postcssWrap} from './postcssWrap'
 
-}
+export default postcssWrap

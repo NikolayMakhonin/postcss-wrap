@@ -1,9 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
+require('./postcss-wrap/postcssWrap.cjs');
+require('postcss');
 
-var postcssWrap_index = require('./postcss-wrap/index.cjs');
-
-
-
-exports.test = postcssWrap_index.test;

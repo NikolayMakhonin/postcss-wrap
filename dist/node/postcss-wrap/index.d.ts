@@ -1,1 +1,2 @@
-export declare function test(): void;
+import { postcssWrap } from './postcssWrap';
+export default postcssWrap;
