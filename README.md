@@ -3,8 +3,8 @@
 [![Build Status][github-image]][github-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
-#Usage
-```
+# Usage
+```ts
 const input = `.class1{} .class2{}`
 const output = await postcss(postcssWrap({
   type: 'atrule',
@@ -17,7 +17,7 @@ const output = await postcss(postcssWrap({
 // output: @media (prefers-color-scheme: dark) {.class1{} .class2{}}
 ```
 
-```
+```ts
 const input = `.class1{} .class2{}`
 const output = await postcss(postcssWrap({
   type: 'rule',
