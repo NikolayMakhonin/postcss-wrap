@@ -1,6 +1,6 @@
 {
   "name": "@flemist/postcss-wrap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PostCSS plugin to wrap all css with selector or media",
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",

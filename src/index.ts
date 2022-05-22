@@ -1,1 +1,3 @@
-export * from './postcss-wrap/index'
+import postcssWrap from './postcss-wrap'
+
+export default postcssWrap
