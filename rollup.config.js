@@ -59,7 +59,7 @@ const nodeConfig = {
     'src/**/*.ts',
   ],
   output: {
-    dir           : 'dist/node',
+    dir           : 'dist',
     format        : 'cjs',
     exports       : 'named',
     entryFileNames: '[name].cjs',
