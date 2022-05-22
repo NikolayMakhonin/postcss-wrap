@@ -7,7 +7,7 @@
 ```ts
 import postcssWrap from '@flemist/postcss-wrap'
 
-const input = `.class1{} .class2{}`
+const input = '.class1{} .class2{}'
 const output = await postcss(postcssWrap({
   type: 'atrule',
   props: {
@@ -22,7 +22,7 @@ const output = await postcss(postcssWrap({
 ```ts
 import postcssWrap from '@flemist/postcss-wrap'
 
-const input = `.class1{} .class2{}`
+const input = '.class1{} .class2{}'
 const output = await postcss(postcssWrap({
   type: 'rule',
   props: {
